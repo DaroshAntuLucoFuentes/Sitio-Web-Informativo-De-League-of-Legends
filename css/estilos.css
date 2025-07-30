@@ -1,0 +1,363 @@
+@font-face {
+    font-family: 'BeaufortforLOL-Bold';
+    src: url(/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Bold.otf);
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Spiegel_TT_Regular';
+    src: url(/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+.animated-border {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #010A13, #07213a, #0d2950, #0b2a4d, #003a77, #022233);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(8px);
+    animation: borderAnimation 20s infinite linear;
+}
+
+.animated-border::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: inherit;
+    z-index: -2;
+}
+
+@keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background-color: rgb(1, 10, 19);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+h1 {
+    font-family: 'BeaufortforLOL-Bold';
+    font-size: 70px;
+    color: rgb(240, 230, 210);
+        
+}
+
+h2 {
+    font-family: 'BeaufortforLOL-Bold';
+    color: rgb(240, 230, 210);
+        
+}
+
+h3 {
+    font-family: 'BeaufortforLOL-Bold';
+    color: rgb(200, 170, 110);
+}
+
+P {
+    font-family: 'Spiegel_TT_Regular';
+    font-size: 20px;
+    color: rgb(160, 155, 140);
+}
+
+li {
+    font-family: 'Spiegel_TT_Regular';
+    font-size: 20px;
+    color: rgb(160, 155, 140);
+}
+
+.animated-img {
+    transition: transform 0.3s ease;
+}
+
+.animated-img:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    background-color: rgb(200, 155, 60);
+    height: 3px;
+}
+
+.bordecontaainer {
+    border-style: solid;
+    background-color: rgb(70, 55, 20);
+    border-color: rgb(200, 155, 60);
+}
+
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.cookie-notification p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.cookie-notification button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cookie-notification a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Estilos para el Buscador de Jugadores */
+.buscador-seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buscador-seccion h2 {
+    color: rgb(240, 230, 210);
+    margin-bottom: 1rem;
+}
+
+.buscador-seccion p {
+    color: rgb(160, 155, 140);
+    margin-bottom: 2rem;
+}
+
+.buscador-seccion .form-control {
+    background-color: rgba(70, 55, 20, 0.8);
+    border: 1px solid rgb(200, 155, 60);
+    color: rgb(240, 230, 210);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+}
+
+.buscador-seccion .form-control:focus {
+    background-color: rgba(70, 55, 20, 0.9);
+    border-color: rgb(240, 230, 210);
+    box-shadow: 0 0 0 0.2rem rgba(200, 155, 60, 0.25);
+    color: rgb(240, 230, 210);
+}
+
+.buscador-seccion .form-control::placeholder {
+    color: rgb(160, 155, 140);
+    opacity: 0.7;
+}
+
+.buscador-seccion .btn-primary {
+    background-color: rgb(200, 155, 60);
+    border-color: rgb(200, 155, 60);
+    color: rgb(1, 10, 19);
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buscador-seccion .btn-primary:hover {
+    background-color: rgb(240, 230, 210);
+    border-color: rgb(240, 230, 210);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buscador-seccion .btn-primary:active {
+    transform: translateY(0);
+}
+
+.buscador-seccion .btn-secondary {
+    background-color: rgb(108, 117, 125);
+    border-color: rgb(108, 117, 125);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buscador-seccion .btn-secondary:hover {
+    background-color: rgb(90, 98, 104);
+    border-color: rgb(90, 98, 104);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buscador-seccion .btn-secondary:active {
+    transform: translateY(0);
+}
+
+.buscador-seccion .card {
+    background-color: rgba(70, 55, 20, 0.9) !important;
+    border: 1px solid rgb(200, 155, 60);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.buscador-seccion .card-header {
+    background-color: rgba(1, 10, 19, 0.8) !important;
+    border-bottom: 1px solid rgb(200, 155, 60);
+    color: rgb(240, 230, 210);
+}
+
+.buscador-seccion .card-body {
+    padding: 1.5rem;
+}
+
+.buscador-seccion .partida-item {
+    background-color: rgba(1, 10, 19, 0.6);
+    border: 1px solid rgb(200, 155, 60) !important;
+    transition: all 0.3s ease;
+}
+
+.buscador-seccion .partida-item:hover {
+    background-color: rgba(1, 10, 19, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200, 155, 60, 0.2);
+}
+
+.buscador-seccion .badge-success {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.buscador-seccion .badge-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.buscador-seccion .text-warning {
+    color: rgb(200, 155, 60) !important;
+}
+
+.buscador-seccion .alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.buscador-seccion .spinner-border {
+    color: rgb(200, 155, 60);
+}
+
+/* Indicadores de estado de datos */
+.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Animación para botón de actualizar */
+.btn-info {
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(23, 162, 184, 0.3);
+}
+
+/* Estilos para indicadores de actualización */
+.update-status {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.live-data {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.demo-data {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Responsive para el buscador */
+@media (max-width: 768px) {
+    .buscador-seccion .col-md-6 {
+        margin-bottom: 1rem;
+    }
+    
+    .buscador-seccion .partida-item .row {
+        flex-direction: column;
+    }
+    
+    .buscador-seccion .partida-item .col-md-3,
+    .buscador-seccion .partida-item .col-md-9 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animación para los resultados */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.buscador-seccion .card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.buscador-seccion .partida-item {
+    animation: fadeInUp 0.5s ease-out;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
